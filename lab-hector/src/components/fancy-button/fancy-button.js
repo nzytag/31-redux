@@ -106,7 +106,7 @@ class FancyButton extends React.Component {
 }
 
 FancyButton.defaultProps = {
-  color: "#FAEAF9",
+  color: "#9CA5C4",
   width: 410,
   height: 100,
   fontSize: 40,
