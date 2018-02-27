@@ -1,0 +1,109 @@
+// /* App styles */
+// body {
+//     background-color: rgb(174, 175, 176);
+// }
+// h1,
+// h3,
+// p {
+//     color: rgba(75, 75, 80, 0.945);
+// }
+// div {
+//     text-align: center;
+//     font-size: 18px;
+// }
+// li {
+//     text-align: left;
+// }
+// input {
+//     border-radius: 4px;
+//     margin: 5px;
+//     border-color: white;
+//     font-size: 12px;
+// }
+// button {
+//     width: 50px;
+//     height: 20px;
+//     border-radius: 4px;
+//     background-color: #ccc;
+//     animation: glow 2s;
+//     border: black;
+// }
+// @keyframes glow {
+//     from {
+//         box-shadow: 0 0 5px 5px #04f708;
+//     }
+//     to {
+//         box-shadow: 0 0 5px 5px #eb0606;
+//     }
+// }
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin-top: -240px;
+    margin-left: -220px;
+
+color: #6699CC;
+font-size: 22px;
+font-weight: bold;
+text-align: center;
+-webkit-font-smoothing: antialiased;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #C594C5;
+background-size: cover;
+background-position: center;
+background-image: linear-gradient(rgba(#add8e6, 0.4), rgba(plum, 0.4)),
+
+}
+.fancy-button {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    perspective: 1800px;
+    .fancy-flipper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform-style: preserve-3d;
+        transform: rotateX(-90deg);
+        transition: transform 0.3s ease;
+    }
+
+    .fancy-front,
+    .fancy-back {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        backface-visibility: hidden;
+        svg {
+            display: block;
+        }
+    }
+
+    &:hover {
+        .fancy-flipper {
+            transform: rotateX(0deg);
+        }
+    }
+
+    &:active {
+        .fancy-flipper {
+            transform: rotateX(0deg) scale(0.95);
+            transition: transform 0.05s ease;
+        }
+    }
+
+    .button-text {
+        letter-spacing: 0.01em;
+        font-family: Futura, "Helvetica Neue", Helvetica, sans-serif;
+    }
+}
